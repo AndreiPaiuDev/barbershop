@@ -5,46 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Barbershop</title>
 </head>
 <body>
-    <header class="container ">
-        <div class="logo">
-            <svg class="logo-icon" width="60" height="60">
-                <use href="./Images/symbol-defs.svg#icon-Logo"></use>
-            </svg>
-        </div>
-        <section class="navigation">
-            <nav class="nav-bar">
-                <div class="nav-links">
-                    <a href="#">About</a>
-                    <a href="#">Services and Prices</a>
-                    <a href="#">Barbers</a>
-                    <a href="#">Contacts</a>
+    <header class="container-header">
+        <aside>
+            <div class="logo-container">
+                <a href="./index.html" class="logo">
+                    <svg class="logo-icon" width="60" height="60">
+                        <use href="./Images/symbol-defs.svg#icon-Logo"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="social">
+                <a href="https://www.youtube.com">Youtube</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <svg class="logo-icon" width="60" height="60">
+                    <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
+                </svg>
+            </div>
+        </aside>
+        <section id="header" class="header-section">
+            <div class="nav-container">
+              <nav class="main-navigation">
+                <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services and Prices</a></li>
+                  <li><a href="#barbers">Barbers</a></li>
+                  <li><a href="#contact">Contacts</a></li>
+                </ul>
+              </nav>
+    
+              <div class="contact-container">
+                <a href="tel:+380441111111" class="phone-number">
+                  +38 044 111 11 11
+                </a>
+                <button type="button" class="button-nav">Book a Service</button>
+              </div>
+            </div>
+    
+            <div class="header-text">
+                <div class="subtitle-container">
+                    <svg class="subtitle-icon2" width="60" height="1">
+                        <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
+                    </svg>
+                    <div class="subtitle2">
+                        A hair salon for men in Kyiv
+                    </div>
                 </div>
-                <div class="contact-nav">
-                    <a href="tel:+380441111111">+38 044 111 11 11</a>
-                    <a hreg="./index.html"><button>Book a service</button></a>
-                </div>
-            </nav>
-        </section>
+
+              <h1 class="title-white">BarberShop</h1>
+              <p class="normal-text">
+                We are experts in trendy men's haircuts.<br />
+                We work quickly, carefully, and tastefully.
+              </p>
+            </div>
+          </section>
         
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="container">
-            <img src="./Images/Slider-img-1.png" alt="">
-            <hr />
-            <span>A hair salon for men in Kyiv</span>
-            <h1>BarberShop</h1>
-            <p>We are experts in trendy men's haircuts. <br> We work quickly, carefully, and tastefully.</p>
-        </section>
-
         <!-- About Section -->
-        <div class="container">
+        <div id="about" class="container">
             <div class="about-section">
                 <div class="images-about">
                     <div>
@@ -66,16 +91,14 @@
                     <h2 class="title">The Best Barbershop <br> in Your City</h2>
                     <h3>If you want to add more confidence to your image,<br> you are definitely in the right place.</h3>
                     <p>We are a team that never rests on its laurels and yearns for change. <br>And once you fall into the hands of our master, you will never be the same <br> again. We are a team that is always on the same wavelength with clients. <br>Therefore, we are always ready to improve everyone who comes to us!</p>
-                    <button>Book a service</button>
+                    <button type="button" class="button">Book a service</button>
                 </div>
             </div>
         </div>
-    
-    
         <!-- Services and Prices -->
-        <div class="container services">
+        <div id="services" class="container services">
             <div class="subtitle-container">
-                <svg class="subtitle-services-icon" width="60" height="1">
+                <svg class="subtitle-icon2" width="60" height="1">
                     <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
                 </svg>
                 <div class="subtitle2">
@@ -131,40 +154,60 @@
             </div>
         </div>
         <!-- Old school Section -->
-        <div class="container old-school-section">
-            <div class="old-schools">
-                <div>
-                    <h3>600</h3>
-                    <p>Satisfied Customers per Day</p>
-                </div>
-                <div>
-                    <h3>50</h3>
-                    <p>Excellent Service Awards</p>
-                </div>
-                <div>
-                    <h3>20</h3>
-                    <p>The Best Barbersof Kyiv</p>
-                </div>
-                <div>
-                    <h3>100</h3>
-                    <p>Gifts for Regular Customers</p>
-                </div>
-            </div>
+        <div class="container">
             <div class="old-school">
-                <div class="subtitle-container">
-                    <svg class="subtitle-icon" width="60" height="1">
-                        <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
-                    </svg>
-                    <div class="subtitle">
-                        old school
+                <div class="old-schools-rating">
+                    <div class="left-side-container">
+                        <div class="rating-box">
+                            <div class="rating-value">
+                                <span class="rating-number">600</span>
+                                <sup>+</sup>
+                            </div>
+                            <span class="rating-description">Satisfied Customers per Day</span>
+                        </div>
+                        <div class="rating-box">
+                            <div class="rating-value">
+                                <span class="rating-number">20</span>
+                                <sup>+</sup>
+                            </div>
+                            <span class="rating-description">The Best Barbers of Kyiv</span>
+                        </div>
                     </div>
+                    <div class="right-side-container">
+                        <div class="rating-box">
+                            <div class="rating-value">
+                                <span class="rating-number">50</span>
+                                <sup>+</sup>
+                            </div>
+                            <span class="rating-description">Excellent Service Awards</span>
+                        </div>
+                        <div class="rating-box">
+                            <div class="rating-value">
+                                <span class="rating-number">100</span>
+                                <sup>+</sup>
+                            </div>
+                            <span class="rating-description">Gifts for Regular Customers</span>
+                        </div>
+                    </div>
+                    
                 </div>
-                <h2 class="title">Why do they come to us?</h2>
-                <p class="info-text">Only good things are said about us. But it is better to see and feel 1 time than to read 10 times. </p>
+                <div class="old-school-info">
+                    <div class="subtitle-container">
+                        <svg class="subtitle-icon" width="60" height="1">
+                            <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
+                        </svg>
+                        <div class="subtitle">
+                            old school
+                        </div>
+                    </div>
+                    <h2 class="title">Why do they come to us?</h2>
+                    <p class="info-text">Only good things are said about us. But it is better to see and feel 1 time than to read 10 times. </p>
+                </div>
             </div>
+            
         </div>
         <!-- Our Barbers Section -->
-        <div class="container our-barbers-section">
+        <div id="barbers" class="container our-barbers-section">
             <div class="subtitle-container">
                 <svg class="subtitle-icon" width="60" height="1">
                     <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
@@ -284,7 +327,7 @@
             </div>
         </div>
         <!-- Contacts Section & Book a service-->
-        <div class="container contact-booking">
+        <div id="contact" class="container contact-booking">
             <div class="booking">
                 <div class="booking-section">
                     <h2 class="title-white">Book a Service</h2>
@@ -303,7 +346,7 @@
                         <input type="text" id="message" name="message" placeholder="MESSAGE">
                     </div>
             
-                    <button type="submit">SEND</button>
+                    <button type="button" class="button">SEND</button>
                 </form>
                 </div>
             </div>
