@@ -236,13 +236,20 @@ button {
     line-height: 15px;
     letter-spacing: 0.02em;
     color: #9DA4BD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
 }
 
-
+.footer-icon {
+    fill: #9DA4BD;
+}
 
 .social-section {
     display: flex;
     flex-direction: row;
+    align-items: center;
     color:#9DA4BD;
     gap: 40px;
     font-family: 'Open Sans';
@@ -255,11 +262,6 @@ button {
 
 /* Booking */
 
-
-.booking-section {
-    margin: 0 56px;
-}
-
 .booking-section h2 {
     color: #FFF;
     font-family: 'raleway';
@@ -268,10 +270,9 @@ button {
     line-height: 50px;
     letter-spacing: 0.05em;
     padding-bottom: 44px;
-    
 }
 
-input, textarea {
+input {
     width: 100%;
     background: none;
     border: none;
@@ -285,20 +286,22 @@ input, textarea {
     letter-spacing: 0.02em;
     outline: none;
 }
-input::placeholder, textarea::placeholder {
+
+label {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+
+
+}
+input::placeholder{
     color: #9DA4BD40;
 }
-
-input:focus::placeholder, textarea:focus::placeholder {
-    color: #FFFFFF;
-    border-bottom: #FFFFFF;
-}
-
-input:hover::placeholder, textarea:hover::placeholder {
-    color: #FFFFFF;
-    border-bottom: #FFFFFF;
-}
-
 
 .input-details {
     display: flex;
@@ -308,6 +311,8 @@ input:hover::placeholder, textarea:hover::placeholder {
 
 .input-group {
     padding-bottom: 44px;
+    display: flex;
+    flex-direction: column;
 }
 
 #name {
@@ -317,21 +322,24 @@ input:hover::placeholder, textarea:hover::placeholder {
 
 #telephone {
     height: 24px;
-    width: 270px;
+    width: 260px;
 }
 
 #message {
     width: 560px;
-    height: 76px;
 }
 
 /* Contacts */
 .contact-booking {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     height: 644px;
-    width: 100%; 
     background-color: #191C26;
+}
+
+.contact-section {
+    padding-left: 100px;;
 }
 
 
@@ -345,6 +353,48 @@ input:hover::placeholder, textarea:hover::placeholder {
     letter-spacing: 0.05em;
     padding-bottom: 44px;
 }
+
+#contact {
+    position: relative;
+    overflow: hidden;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-image: url("../Images/contactsBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#contact * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+}
+
+.contact-row span {
+    font-family: "open sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #9DA4BD;
+}
+
 
 .latin-section {
     display: flex;
@@ -361,7 +411,37 @@ input:hover::placeholder, textarea:hover::placeholder {
     height: 360px;
 }
 
+.schedule-icon {
+    fill: #9DA4BD66;
+}
 
+.schedule-title {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.01;
+    text-transform:uppercase;
+    padding-left: 20px;
+    color:#FFF;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.schedule-time span{
+    font-family: "open sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #9DA4BD;
+}
 /* Our Barbers */
 .our-barbers-section {
     background-color: #F7F7F7;
@@ -665,18 +745,25 @@ aside {
     align-items: center;
     width: 155px;
     max-height: 680px;
-    
+    margin: auto;
 }
 
 .logo-container {
+    position: absolute;
+    top: 32px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .social {
+    position:absolute;
+    top: 470px;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -749,6 +836,7 @@ aside {
     background-color: #ff6c00;
     color: #fff;
     border: 1px solid #ff6c00;
+    transition: 0.3s;
 }
 
 .main-navigation ul li:hover {
@@ -757,4 +845,67 @@ aside {
 
 .icon-svg:hover {
     fill: #ff6c00;
+    transition: 0.3s;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #ff6c00;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    fill: #ff6c00;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.input-details:hover {
+    cursor: pointer;
+    color: #FFF;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input:hover,
+input:focus {
+    border-bottom: 1px solid #fff;
+}
+
+input::placeholder {
+    color: transparent; 
+}
+
+input:focus::placeholder {
+    color: #aaa; 
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group:hover label,
+.input-group input:focus + label {
+    color: #fff; 
+    transition: 0.3s;
+}
+
+.input-group:hover input,
+.input-group input:focus {
+    border-bottom: 2px solid #fff;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+input:focus::placeholder {
+    color: #aaa;
 }

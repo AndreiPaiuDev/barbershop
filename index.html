@@ -334,37 +334,63 @@
                 <form>
                     <div class="input-details">
                         <div class="input-group">
-                            <input type="text" id="name" name="name" required placeholder="NAME *">
+                            <label for="name">NAME *</label>
+                            <input type="text" id="name" name="name" required placeholder="">
                         </div>
                 
                         <div class="input-group">
-                            <input type="tel" id="telephone" name="telephone" required placeholder="TELEPHONE *">
+                            <label for="telephone">TELEPHONE *</label>                            
+                            <input type="tel" id="telephone" name="telephone" required placeholder="">
                         </div>
                     </div>
             
                     <div class="input-group">   
-                        <input type="text" id="message" name="message" placeholder="MESSAGE">
+                        <label for="message">MESSAGE</label>
+                        <input type="text" id="message" name="message" placeholder="">
                     </div>
             
                     <button type="button" class="button">SEND</button>
                 </form>
                 </div>
             </div>
-            <div class="contact contact-bg">
-                <div class="booking-section ">
+            <div class="contact">
+                <div class="contact-section ">
                     <h2 class="title-white">Contacts</h2>
-                <div class="contactdetails">
-                    <p>Main Street, 7A Kyiv, 08132</p>
-                    <p>+38 044 111 11 11</p>
-                    <p>barbershop@email.com</p>
-                </div>
-                <div class="scheduale">
-                    <p>working hours</p>
-                    <p>Daily from 9:00 AM till 22:00 PM</p>
-                </div>
+                    <div class="contactdetails">
+                        <div class="contact-row">
+                            <svg class="logo-contact" width="24" height="24">
+                                <use href="./Images/contact.svg#icon-map-pin"></use>
+                            </svg>
+                            <span>Main Street, 7A </br> Kyiv, 08132</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg class="logo-contact" width="24" height="24">
+                                <use href="./Images/contact.svg#icon-phone"></use>
+                            </svg>
+                            <span>+38 044 111 11 11</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg class="logo-contact" width="24" height="24">
+                                <use href="./Images/contact.svg#icon-mail"></use>
+                            </svg>
+                            <span>barbershop@email.com</span>
+                        </div>
+                        <div class="schedule-container">
+                            <svg class="schedule-icon" width="60" height="1">
+                                <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
+                            </svg>
+                            <div class="schedule-title">
+                                working hours
+                            </div>
+                        </div>
+                        <div class="schedule-time">
+                            <span>Daily from 9:00 AM till 22:00 PM</span>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </div>
+
 
     </main>
 
@@ -372,10 +398,17 @@
     <footer>
         <div class="footer">
             <div class="copyright-section">
-                <p class="copyright">Copyright 2025</p>
+                <p class="copyright">
+                    <svg class="footer-icon" width="12" height="12">
+                        <use href="./Images/symbol-defs.svg#icon-copyright"></use>
+                    </svg>
+                    Copyright 2025</p>
             </div>
     
             <div class="social-section">
+                <svg class="footer-icon" width="60" height="1">
+                    <use href="./Images/symbol-defs.svg#icon-Rectangle-5"></use>
+                </svg>
                 <a href="http://youtube.com">Youtube</a>
                 <a href="http://instagram.com">Instagram</a>
             </div>
